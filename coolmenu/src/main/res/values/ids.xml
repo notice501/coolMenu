@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="view0" type="id" />
+    <item name="view1" type="id" />
+    <item name="view2" type="id" />
+    <item name="view3" type="id" />
+    <item name="view4" type="id" />
+    <item name="cl_menu" type="id" />
+    <item name="cl_title" type="id" />
+</resources>

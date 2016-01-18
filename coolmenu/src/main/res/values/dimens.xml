@@ -1,0 +1,4 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="cl_title_trans">40dp</dimen>
+</resources>

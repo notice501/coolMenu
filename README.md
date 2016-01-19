@@ -16,8 +16,8 @@ repositories {
 Add the dependency:
 ```gradle
  dependencies {
-	        compile 'com.github.DxTT:coolMenu:v1.1'
-	}
+ 	compile 'com.github.DxTT:coolMenu:v1.1'
+ }
 ```
 
 An example of basic usage in layout.xml:

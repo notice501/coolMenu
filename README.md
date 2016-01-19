@@ -52,31 +52,31 @@ This statement declares the number of cards, The upper limit is five.
 
 Like `ViewPager`,set an Adapter for the `CoolMenuFrameLayout` view.
 ```java
-    coolMenuFrameLayout = $(R.id.rl_main);
-    String[] titles = {"CONTACT", "ABOUT", "TEAM", "PROJECTS"};
-    titleList = Arrays.asList(titles);
-    //set your titles,which is optional
-    coolMenuFrameLayout.setTitles(titleList);
-    //set your menu icon
-    coolMenuFrameLayout.setMenuIcon(R.drawable.menu2);
+coolMenuFrameLayout = $(R.id.rl_main);
+String[] titles = {"CONTACT", "ABOUT", "TEAM", "PROJECTS"};
+titleList = Arrays.asList(titles);
+//set your titles,which is optional
+coolMenuFrameLayout.setTitles(titleList);
+//set your menu icon
+coolMenuFrameLayout.setMenuIcon(R.drawable.menu2);
 
-    fragments.add(new Fragment1());
-    fragments.add(new Fragment2());
-    fragments.add(new Fragment3());
-    fragments.add(new Fragment4());
+fragments.add(new Fragment1());
+fragments.add(new Fragment2());
+fragments.add(new Fragment3());
+fragments.add(new Fragment4());
 
-    FragmentPagerAdapter adapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
-        @Override
-        public Fragment getItem(int position) {
-            return fragments.get(position);
-        }
+FragmentPagerAdapter adapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
+    @Override
+    public Fragment getItem(int position) {
+        return fragments.get(position);
+    }
 
-        @Override
-        public int getCount() {
+    @Override
+    public int getCount() {
 		return fragments.size();
-        }
-    };
-    coolMenuFrameLayout.setAdapter(adapter);
+    }
+};
+coolMenuFrameLayout.setAdapter(adapter);
 ```
 
 ## Contributors

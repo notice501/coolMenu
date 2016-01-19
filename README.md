@@ -15,9 +15,9 @@ repositories {
 
 Add the dependency:
 ```gradle
- dependencies {
- 	compile 'com.github.DxTT:coolMenu:v1.1'
- }
+dependencies {
+	compile 'com.github.DxTT:coolMenu:v1.1'
+}
 ```
 
 The usage is really like `ViewPager`, just add `CoolMenuFrameLayout` to your layout.
@@ -47,7 +47,7 @@ An example of basic usage in layout.xml:
 
 This statement declares the number of cards, The upper limit is five.
 ```xml
-  app:num="four"
+app:num="four"
 ```
 
 Like `ViewPager`,set an Adapter for the `CoolMenuFrameLayout` view.

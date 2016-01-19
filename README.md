@@ -73,7 +73,7 @@ Like `ViewPager`,set an Adapter for the `CoolMenuFrameLayout` view.
 
         @Override
         public int getCount() {
-	    return fragments.size();
+		return fragments.size();
         }
     };
     coolMenuFrameLayout.setAdapter(adapter);

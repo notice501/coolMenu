@@ -9,7 +9,7 @@
     tools:ignore="all"
     tools:showIn="@layout/activity_main">
 
-    <com.xuechi.coolmenu.CoolMenuFrameLayout
+    <com.dxtt.coolmenu.CoolMenuFrameLayout
         android:id="@+id/rl_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

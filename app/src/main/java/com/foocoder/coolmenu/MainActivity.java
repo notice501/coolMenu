@@ -8,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.xuechi.coolmenu.CoolMenuFrameLayout;
+import com.dxtt.coolmenu.CoolMenuFrameLayout;
 
 import java.util.ArrayList;
 import java.util.Arrays;

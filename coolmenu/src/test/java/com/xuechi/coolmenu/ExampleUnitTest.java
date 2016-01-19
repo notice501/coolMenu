@@ -1,4 +1,4 @@
-package com.xuechi.coolmenu;
+package com.dxtt.coolmenu;
 
 import org.junit.Test;
 

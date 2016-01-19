@@ -20,7 +20,10 @@ Add the dependency:
  }
 ```
 
+The usage is really like `ViewPager`, just add `CoolMenuFrameLayout` to your layout.
+
 An example of basic usage in layout.xml:
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <merge
@@ -41,12 +44,13 @@ An example of basic usage in layout.xml:
         app:num="four"/>
 </merge>
 ```
-This statement declare the number of cards, The upper limit is 5.
+
+This statement declares the number of cards, The upper limit is five.
 ```xml
   app:num="four"
 ```
 
-In your Activity,set an adapter for your layout:
+Like `ViewPager`,set an Adapter for the `CoolMenuFrameLayout` view.
 ```java
     coolMenuFrameLayout = $(R.id.rl_main);
     String[] titles = {"CONTACT", "ABOUT", "TEAM", "PROJECTS"};

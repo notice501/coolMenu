@@ -54,7 +54,7 @@ In your Activity,set an adapter for your layout:
         //set your titles,which is optional
         coolMenuFrameLayout.setTitles(titleList);
         //set your menu icon
-//        coolMenuFrameLayout.setMenuIcon(R.drawable.menu2);
+        coolMenuFrameLayout.setMenuIcon(R.drawable.menu2);
 
         fragments.add(new Fragment1());
         fragments.add(new Fragment2());
@@ -76,7 +76,7 @@ In your Activity,set an adapter for your layout:
 ```
 
 ## Contributors
-(@xuechister)[https://github.com/xuechister],(@foocoder)[https://github.com/notice501]
+[@xuechister](https://github.com/xuechister),[@foocoder](https://github.com/notice501)
 
 ## License
 `coolMenu` is available under the MIT license

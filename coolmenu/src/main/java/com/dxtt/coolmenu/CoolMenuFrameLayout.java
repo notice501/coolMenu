@@ -61,23 +61,11 @@ public final class CoolMenuFrameLayout extends FrameLayout {
     private int chosen;
 
     public CoolMenuFrameLayout(Context context) {
-        super(context);
-        mContext = context;
-        init();
+        this(context, null);
     }
 
     public CoolMenuFrameLayout(Context context, AttributeSet attrs) {
-        super(context, attrs);
-        mContext = context;
-        TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.CoolMenuFrameLayout);
-        num = array.getInteger(R.styleable.CoolMenuFrameLayout_num, 3);
-        mTitleColor = array.getColor(R.styleable.CoolMenuFrameLayout_titleColor,
-                getResources().getColor(android.R.color.primary_text_light));
-        mTitleSize = array.getDimension(R.styleable.CoolMenuFrameLayout_titleSize,
-                getResources().getDimension(R.dimen.cl_title_size));
-        mMenuIcon = array.getDrawable(R.styleable.CoolMenuFrameLayout_titleIcon);
-        array.recycle();
-        init();
+        this(context, attrs, 0);
     }
 
     public CoolMenuFrameLayout(Context context, AttributeSet attrs, int defStyleAttr) {

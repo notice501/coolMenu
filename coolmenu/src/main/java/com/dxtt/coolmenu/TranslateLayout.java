@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -108,6 +109,14 @@ class TranslateLayout extends FrameLayout implements View.OnClickListener {
 
     public void setMenuIcon(int resId) {
         mMenu.setImageResource(resId);
+    }
+
+    public void setMenuTitleSize(float size) {
+        mTitle.setTextSize(TypedValue.COMPLEX_UNIT_PX, size);
+    }
+
+    public void setMenuTitleColor(int color) {
+        mTitle.setTextColor(color);
     }
 
     public void setMenuAlpha(float fraction) {

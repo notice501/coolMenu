@@ -8,5 +8,8 @@
             <enum name="four" value="4" />
             <enum name="five" value="5" />
         </attr>
+        <attr name="titleSize" format="dimension"/>
+        <attr name="titleColor" format="color"/>
+        <attr name="titleIcon" format="reference"/>
     </declare-styleable>
 </resources>

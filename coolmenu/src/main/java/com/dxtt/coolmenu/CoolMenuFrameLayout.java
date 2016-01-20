@@ -5,7 +5,7 @@ import android.animation.PropertyValuesHolder;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.database.DataSetObserver;
-import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.annotation.UiThread;
 import android.support.v4.view.PagerAdapter;
@@ -28,6 +28,13 @@ public final class CoolMenuFrameLayout extends FrameLayout {
     private Context mContext;
 
     private int num = 3;
+
+    private int mTitleColor;
+
+    private float mTitleSize;
+
+    private Drawable mMenuIcon;
+
 
     private int[] ids = {R.id.view0, R.id.view1, R.id.view2, R.id.view3, R.id.view4};
 
@@ -64,6 +71,11 @@ public final class CoolMenuFrameLayout extends FrameLayout {
         mContext = context;
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.CoolMenuFrameLayout);
         num = array.getInteger(R.styleable.CoolMenuFrameLayout_num, 3);
+        mTitleColor = array.getColor(R.styleable.CoolMenuFrameLayout_titleColor,
+                getResources().getColor(android.R.color.primary_text_light));
+        mTitleSize = array.getDimension(R.styleable.CoolMenuFrameLayout_titleSize,
+                getResources().getDimension(R.dimen.cl_title_size));
+        mMenuIcon = array.getDrawable(R.styleable.CoolMenuFrameLayout_titleIcon);
         array.recycle();
         init();
     }
@@ -73,6 +85,11 @@ public final class CoolMenuFrameLayout extends FrameLayout {
         mContext = context;
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.CoolMenuFrameLayout);
         num = array.getInteger(R.styleable.CoolMenuFrameLayout_num, 3);
+        mTitleColor = array.getColor(R.styleable.CoolMenuFrameLayout_titleColor,
+                getResources().getColor(android.R.color.primary_text_light));
+        mTitleSize = array.getDimension(R.styleable.CoolMenuFrameLayout_titleSize,
+                getResources().getDimension(R.dimen.cl_title_size));
+        mMenuIcon = array.getDrawable(R.styleable.CoolMenuFrameLayout_titleIcon);
         array.recycle();
         init();
     }
@@ -87,9 +104,12 @@ public final class CoolMenuFrameLayout extends FrameLayout {
                 frameLayout.setId(ids[i]);
                 frameLayout.setTag(i);
                 frameLayout.setOnClickListener(mMenuChooser);
-                frameLayout.setBackgroundColor(Color.rgb(i * 10, i * 50, i * 100));
                 frameLayout.setOnMenuClickListener(menuListener);
-                frameLayout.setTitle("Menu " + i);
+                if(mMenuIcon != null) {
+                    frameLayout.setMenuIcon(mMenuIcon);
+                }
+                frameLayout.setMenuTitleSize(mTitleSize);
+                frameLayout.setMenuTitleColor(mTitleColor);
                 if (i == num - 1) frameLayout.setMenuAlpha(1);
                 LayoutParams layoutParams = new LayoutParams(MATCH_PARENT, MATCH_PARENT);
                 frameLayout.setLayoutParams(layoutParams);
@@ -130,6 +150,7 @@ public final class CoolMenuFrameLayout extends FrameLayout {
         }
     }
 
+
     public void setAdapter(PagerAdapter adapter) {
         if (mAdapter != null) {
             mAdapter.unregisterDataSetObserver(mObserver);
@@ -152,7 +173,7 @@ public final class CoolMenuFrameLayout extends FrameLayout {
 
         int count = mAdapter.getCount();
         if (count != num) {
-            throw new RuntimeException("适配器中碎片的数量必须等于布局中设置的数量");
+            throw new RuntimeException("number of view should equal 'num' that declared in xml");
         }
 
         for (int i = 0; i < count; i++) {
@@ -172,7 +193,7 @@ public final class CoolMenuFrameLayout extends FrameLayout {
     @UiThread
     public void setTitleByIndex(@NonNull String title, int index) {
         if (index > num -1) {
-            throw new IndexOutOfBoundsException("目标已超出范围");
+            throw new IndexOutOfBoundsException();
         }
         ((TranslateLayout) getChildAt(index)).setTitle(title);
     }

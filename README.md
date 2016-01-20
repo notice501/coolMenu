@@ -49,6 +49,12 @@ This statement declares the number of cards, The upper limit is five.
 ```xml
 app:num="four"
 ```
+You can set your title icon or title style in xml like this:
+```xml
+app:titleSize="@dimen/cl_title_size"
+app:titleColor="@color/colorPrimary"
+app:titleIcon="@drawable/menu"
+```
 
 Like `ViewPager`,set an Adapter for the `CoolMenuFrameLayout` view.
 ```java

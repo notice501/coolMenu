@@ -1,3 +1,5 @@
+[![Android Gems](http://www.android-gems.com/badge/DxTT/coolMenu.svg?branch=master)](http://www.android-gems.com/lib/DxTT/coolMenu)
+
 # coolMenu
 The Android implementation of [Cards Menu Concept](https://dribbble.com/shots/2389505-Cards-Menu-Concept) by [Gal Shir](https://dribbble.com/galshir).
 

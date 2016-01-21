@@ -102,10 +102,10 @@ public final class CoolMenuFrameLayout extends FrameLayout {
                 LayoutParams layoutParams = new LayoutParams(MATCH_PARENT, MATCH_PARENT);
                 frameLayout.setLayoutParams(layoutParams);
                 addView(frameLayout);
-                mOpenAnimators = new ObjectAnimator[num];
-                mChosenAnimators = new ObjectAnimator[num];
-                mMenuOpenAnimators = new ObjectAnimator[num];
             }
+            mOpenAnimators = new ObjectAnimator[num];
+            mChosenAnimators = new ObjectAnimator[num];
+            mMenuOpenAnimators = new ObjectAnimator[num];
             initAnim();
         }
     }

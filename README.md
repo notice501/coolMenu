@@ -1,5 +1,3 @@
-[![Android Gems](http://www.android-gems.com/badge/DxTT/coolMenu.svg?branch=master)](http://www.android-gems.com/lib/DxTT/coolMenu)
-
 # coolMenu
 The Android implementation of [Cards Menu Concept](https://dribbble.com/shots/2389505-Cards-Menu-Concept) by [Gal Shir](https://dribbble.com/galshir).
 
@@ -18,7 +16,7 @@ repositories {
 Add the dependency:
 ```gradle
 dependencies {
-	compile 'com.github.DxTT:coolMenu:v1.1'
+	compile 'com.github.DxTT:coolMenu:v1.2'
 }
 ```
 
@@ -92,3 +90,5 @@ coolMenuFrameLayout.setAdapter(adapter);
 
 ## License
 `coolMenu` is available under the MIT license
+
+[![Android Gems](http://www.android-gems.com/badge/DxTT/coolMenu.svg?branch=master)](http://www.android-gems.com/lib/DxTT/coolMenu)

@@ -16,7 +16,7 @@ repositories {
 Add the dependency:
 ```gradle
 dependencies {
-	compile 'com.github.DxTT:coolMenu:v1.2'
+	compile 'com.github.DxTT:coolMenu:v1.1'
 }
 ```
 

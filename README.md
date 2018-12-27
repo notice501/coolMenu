@@ -2,7 +2,7 @@
 The Android implementation of [Cards Menu Concept](https://dribbble.com/shots/2389505-Cards-Menu-Concept) by [Gal Shir](https://dribbble.com/galshir).
 
 This is Gal Shir's awesome shot.
-![](https://d13yacurqjgara.cloudfront.net/users/729829/screenshots/2389505/menu.gif)
+![](https://cdn.dribbble.com/users/729829/screenshots/2389505/menu.gif)
 
 ## Usage
 I published the library with [Jitpack](https://jitpack.io), so add it to your build.gradle with:
@@ -85,8 +85,6 @@ FragmentPagerAdapter adapter = new FragmentPagerAdapter(getSupportFragmentManage
 coolMenuFrameLayout.setAdapter(adapter);
 ```
 
-## Contributors
-[@xuechister](https://github.com/xuechister),[@foocoder](https://github.com/notice501)
 
 ## License
 `coolMenu` is available under the MIT license
